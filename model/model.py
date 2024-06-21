@@ -33,9 +33,7 @@ class Model:
         vicini = []
         for node in self.graph.nodes:
             v = self.graph.neighbors(node)
-            l = 0
-            for point in v:
-                l += 1
+            l = len(list(v))
             vicini.append((node, l))
         vicini.sort(key=lambda x: x[1],
                     reverse=True)
